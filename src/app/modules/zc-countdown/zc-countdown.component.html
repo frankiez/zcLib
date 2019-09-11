@@ -1,0 +1,7 @@
+<button
+  [ngClass]="{'disabled': disabled}"
+  (click)="onClickHandle()"
+  [ngStyle]="{'width': width ? width + 'px' : 'auto'}"
+>
+  {{ disabled ? disabledText : originalText }}
+</button>
