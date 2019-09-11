@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 // 回调函数显示自定义剩余时间
 type TypeCustomRemainingCallback = null | ((sec: number) => string);
@@ -11,7 +11,7 @@ type TypeClickCallback = null | ((canClick: boolean) => number);
   templateUrl: './zc-countdown.component.html',
   styleUrls: ['./zc-countdown.component.less']
 })
-export class ZcCountdownComponent implements OnInit {
+export class ZcCountdownComponent {
   // 固定宽度
   @Input() width = null;
   // 原始的发送按钮文字
@@ -30,9 +30,6 @@ export class ZcCountdownComponent implements OnInit {
   private timer = null;
 
   constructor() {
-  }
-
-  ngOnInit() {
   }
 
   private showRemaining(sec: number) {
